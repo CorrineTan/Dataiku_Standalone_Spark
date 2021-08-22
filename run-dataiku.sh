@@ -15,7 +15,7 @@ sleep 10
 echo "Waiting for everything setting up"
 
 # Stop DSS 
-"$DSS_DATAIR"/bin/dss stop
+"$DSS_DATADIR"/bin/dss stop
 echo "DSS stop now"
 
 # Setup Spark Integration 
