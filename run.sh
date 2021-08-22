@@ -6,6 +6,8 @@ DKU_DIR="/home/dataiku"
 SPARK_HOME="/opt/spark"
 SPARK_ARCHIVE="dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
 
+echo $SPARK_HOME
+
 if [ ! -f "$DSS_DATADIR"/bin/env-default.sh ]; then
 	# Initialize new data directory
 	"$DSS_INSTALLDIR"/installer.sh -d "$DSS_DATADIR" -p "$DSS_PORT"
