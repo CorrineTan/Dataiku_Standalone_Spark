@@ -3,7 +3,7 @@
 DSS_INSTALLDIR="/home/dataiku/dataiku-dss-$DSS_VERSION"
 DSS_DATADIR="/home/dataiku/dss"
 DKU_DIR="/home/dataiku"
-SPARK_HOME="/opt/spark"
+SPARK_HOME="/home/dataiku/dataiku-dss-8.0.2/spark-standalone-home"
 SPARK_ARCHIVE="dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
 
 # Let dataiku create /home/dataiku/dss folder first
