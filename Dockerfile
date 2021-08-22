@@ -14,11 +14,8 @@ RUN wget $SPARK_URL && \
 	tar -xzf $SPARK_ARCHIVE -C /opt/spark --strip-components=1
 
 COPY run-dataiku.sh /home/dataiku/
-COPY run.sh /home/dataiku/
 RUN chown dataiku:dataiku /home/dataiku/run-dataiku.sh
 RUN chmod 777 /home/dataiku/run-dataiku.sh
-RUN chown dataiku:dataiku /home/dataiku/run.sh
-RUN chmod 777 /home/dataiku/run.sh
 
 USER dataiku
 
