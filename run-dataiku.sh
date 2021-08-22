@@ -6,25 +6,27 @@ DKU_DIR="/home/dataiku"
 SPARK_HOME="/opt/spark"
 SPARK_ARCHIVE="dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
 
-
 # Let dataiku create /home/dataiku/dss folder first
 echo "Running DSS Now!"
 "$DKU_DIR"/run.sh
 
 # Wait for everything's setup
-sleep 30
+sleep 10
+echo "Waiting for everything setting up"
 
 # Stop DSS 
 "$DSS_DATAIR"/bin/dss stop
+echo "DSS stop now"
 
 # Setup Spark Integration 
 "$DSS_DATADIR"/bin/dssadmin install-spark-integration -sparkHome "$SPARK_HOME" -standaloneArchive "$DKU_DIR"/"$SPARK_ARCHIVE"
 
 # Wait for spark setup
-sleep 15
+sleep 10
 
 # Start DSS 
 "$DSS_DATAIR"/bin/dss start
+echo "DSS restart now"
 
 # Keep the container running
 tail -f /dev/null
