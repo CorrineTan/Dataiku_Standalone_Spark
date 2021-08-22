@@ -15,6 +15,7 @@ RUN wget $SPARK_URL && \
 
 COPY run.sh /home/dataiku/
 RUN chown dataiku:dataiku /home/dataiku/run.sh
+RUN chmod 777 /home/dataiku/run.sh
 
 USER dataiku
 
