@@ -6,6 +6,7 @@ DKU_DIR="/home/dataiku"
 SPARK_HOME="/opt/spark"
 SPARK_ARCHIVE="dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
 
+echo "NOW START!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Print the spark home!!!!!"
 echo $SPARK_HOME
 
 if [ ! -f "$DSS_DATADIR"/bin/env-default.sh ]; then
