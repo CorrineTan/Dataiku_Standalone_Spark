@@ -19,6 +19,7 @@ echo "Waiting for everything setting up"
 echo "DSS stop now"
 
 # Setup Spark Integration 
+echo "$SPARK_HOME"
 "$DSS_DATADIR"/bin/dssadmin install-spark-integration -sparkHome "$SPARK_HOME" -standaloneArchive "$DKU_DIR"/"$SPARK_ARCHIVE"
 
 # Wait for spark setup
