@@ -25,7 +25,7 @@ echo "DSS stop now"
 sleep 10
 
 # Start DSS 
-"$DSS_DATAIR"/bin/dss start
+"$DSS_DATADIR"/bin/dss start
 echo "DSS restart now"
 
 # Keep the container running
