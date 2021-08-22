@@ -1,6 +1,8 @@
 #!/bin/bash -e
 
 DSS_INSTALLDIR="/home/dataiku/dataiku-dss-$DSS_VERSION"
+SPARK_HOME="/opt/spark"
+SPARK_ARCHIVE="dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
 
 if [ ! -f "$DSS_DATADIR"/bin/env-default.sh ]; then
 	# Initialize new data directory
