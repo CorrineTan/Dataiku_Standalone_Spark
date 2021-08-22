@@ -8,7 +8,7 @@ SPARK_ARCHIVE="dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
 
 # Let dataiku create /home/dataiku/dss folder first
 echo "Running DSS Now!"
-"$DKU_DIR"/run.sh
+"$DKU_DIR"/run.sh &
 
 # Wait for everything's setup
 sleep 10
