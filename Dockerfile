@@ -4,7 +4,7 @@ MAINTAINER Corrine Tan <tenglunt@gmail.com>
 
 USER root
 
-RUN apt-get update && apt-get install -y wget
+RUN yum update -y && yum install -y wget
 
 ENV SPARK_ARCHIVE "dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
 ENV SPARK_URL "https://downloads.dataiku.com/public/dss/8.0.7/${SPARK_ARCHIVE}"
