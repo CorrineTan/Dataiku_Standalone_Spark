@@ -20,6 +20,7 @@ RUN chmod 777 /home/dataiku/run-dataiku.sh
 USER dataiku
 
 # ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre/
+ENV SPARK_HOME /home/dataiku/dataiku-dss-8.0.2/spark-standalone-home
 ENV PATH $PATH:$SPARK_HOME/bin
 ENV DKU_DIR /home/dataiku
 
