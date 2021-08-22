@@ -23,4 +23,4 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre/
 ENV PATH $PATH:/opt/spark/bin
 ENV SPARK_HOME /opt/spark
 
-CMD [ "/home/dataiku/run-dataiku.sh" ]
+ENTRYPOINT [ "/home/dataiku/run-dataiku.sh" ]
