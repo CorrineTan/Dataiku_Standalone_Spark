@@ -1,8 +1,6 @@
 #!/bin/bash -e
 
 DSS_INSTALLDIR="/home/dataiku/dataiku-dss-$DSS_VERSION"
-SPARK_HOME="/home/dataiku/dss/bin"
-SPARK_ARCHIVE="/home/dataiku/dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
 
 if [ ! -f "$DSS_DATADIR"/bin/env-default.sh ]; then
 	# Initialize new data directory
@@ -18,5 +16,8 @@ elif [ $(bash -c 'source "$DSS_DATADIR"/bin/env-default.sh && echo "$DKUINSTALLD
 	"$DSS_DATADIR"/bin/dssadmin install-spark-integration -sparkHome "$SPARK_HOME" -standaloneArchive $SPARK_ARCHIVE
 
 fi
+
+# wait a few sec
+sleep 15
 
 exec "$DSS_DATADIR"/bin/dss run
