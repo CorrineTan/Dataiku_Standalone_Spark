@@ -9,7 +9,7 @@ echo "Running DSS Now!"
 "$DKU_DIR"/run.sh &
 
 echo "Waiting for everything setting up"
-sleep 10
+sleep 30
 
 echo "DSS stop now"
 "$DSS_DATADIR"/bin/dss stop
@@ -18,7 +18,7 @@ echo "Setting up Spark Standalone Integration"
 "$DSS_DATADIR"/bin/dssadmin install-spark-integration -standaloneArchive "$DKU_DIR"/"$SPARK_ARCHIVE"
 
 # Wait for spark setup
-sleep 10
+sleep 15
 
 "$DSS_DATADIR"/bin/dss start
 echo "DSS restart now"
