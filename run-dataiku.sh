@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-DSS_INSTALLDIR="/home/dataiku/dataiku-dss-$DSS_VERSION"
+DSS_INSTALLDIR="/home/dataiku/dataiku-dss-9.0.4"
 DSS_DATADIR="/home/dataiku/dss"
 DKU_DIR="/home/dataiku"
 SPARK_ARCHIVE="dataiku-dss-spark-standalone-9.0.4-3.0.1-generic-hadoop3.tar.gz"
@@ -16,6 +16,7 @@ echo "DSS stop now"
 
 echo "Setting up Spark Standalone Integration"
 "$DSS_DATADIR"/bin/dssadmin install-spark-integration -standaloneArchive "$DKU_DIR"/"$SPARK_ARCHIVE"
+"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration -standaloneArchive "$DKU_DIR"/"$HADOOP_ARCHIVE"
 
 # Wait for spark setup
 sleep 15
