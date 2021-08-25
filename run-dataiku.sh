@@ -3,7 +3,7 @@
 DSS_INSTALLDIR="/home/dataiku/dataiku-dss-$DSS_VERSION"
 DSS_DATADIR="/home/dataiku/dss"
 DKU_DIR="/home/dataiku"
-SPARK_ARCHIVE="dataiku-dss-spark-standalone-8.0.7-2.4.5-generic-hadoop3.tar.gz"
+SPARK_ARCHIVE="dataiku-dss-spark-standalone-9.0.4-3.0.1-generic-hadoop3.tar.gz"
 
 echo "Running DSS Now!"
 "$DKU_DIR"/run.sh &
