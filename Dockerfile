@@ -70,8 +70,8 @@ ENV HADOOP_URL "https://downloads.dataiku.com/public/dss/9.0.4/${HADOOP_ARCHIVE}
 WORKDIR /home/dataiku
 USER dataiku
 
-RUN wget "$SPARK_URL"/"$SPARK_ARCHIVE"
-RUN wget "$HADOOP_URL"/"$HADOOP_ARCHIVE"
+RUN wget "$SPARK_URL"
+RUN wget "$HADOOP_URL"
 
 # ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre/
 ENV PATH $PATH:$SPARK_HOME/bin:$HADOOP_HOME/bin
