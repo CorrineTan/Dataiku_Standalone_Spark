@@ -67,11 +67,6 @@ ENV SPARK_URL "https://downloads.dataiku.com/public/dss/9.0.4/${SPARK_ARCHIVE}"
 ENV HADOOP_ARCHIVE "dataiku-dss-hadoop-standalone-libs-generic-hadoop3-9.0.4.tar.gz"
 ENV HADOOP_URL "https://downloads.dataiku.com/public/dss/9.0.4/${HADOOP_ARCHIVE}"
 
-RUN wget $SPARK_URL
-COPY run-dataiku.sh /home/dataiku/
-RUN chown dataiku:dataiku /home/dataiku/run-dataiku.sh
-RUN chmod 777 /home/dataiku/run-dataiku.sh
-
 USER dataiku
 
 # ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre/

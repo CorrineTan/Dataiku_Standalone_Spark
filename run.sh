@@ -7,7 +7,7 @@ if [ ! -f "$DSS_DATADIR"/bin/env-default.sh ]; then
 	"$DSS_INSTALLDIR"/installer.sh -d "$DSS_DATADIR" -p "$DSS_PORT"
 	"$DSS_DATADIR"/bin/dssadmin install-R-integration
 	"$DSS_DATADIR"/bin/dssadmin install-spark-integration -sparkHome "$SPARK_HOME"
-	"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration -sparkHome "$HADOOP_HOME"
+	"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration 
 	echo "dku.registration.channel=docker-image" >>"$DSS_DATADIR"/config/dip.properties
 
 elif [ $(bash -c 'source "$DSS_DATADIR"/bin/env-default.sh && echo "$DKUINSTALLDIR"') != "$DSS_INSTALLDIR" ]; then
@@ -15,7 +15,7 @@ elif [ $(bash -c 'source "$DSS_DATADIR"/bin/env-default.sh && echo "$DKUINSTALLD
 	"$DSS_INSTALLDIR"/installer.sh -d "$DSS_DATADIR" -u -y
 	"$DSS_DATADIR"/bin/dssadmin install-R-integration
 	"$DSS_DATADIR"/bin/dssadmin install-spark-integration -sparkHome "$SPARK_HOME"
-	"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration -sparkHome "$HADOOP_HOME"
+	"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration 
 
 fi
 
