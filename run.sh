@@ -6,16 +6,16 @@ if [ ! -f "$DSS_DATADIR"/bin/env-default.sh ]; then
 	# Initialize new data directory
 	"$DSS_INSTALLDIR"/installer.sh -d "$DSS_DATADIR" -p "$DSS_PORT"
 	"$DSS_DATADIR"/bin/dssadmin install-R-integration
-	"$DSS_DATADIR"/bin/dssadmin install-spark-integration -standaloneArchivee "$SPARK_ARCHIVE"
-	"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration -standaloneArchive "$HADOOP_ARCHIVE"
+	"$DSS_DATADIR"/bin/dssadmin install-spark-integration -standaloneArchivee "DKU_DIR"/"$SPARK_ARCHIVE"
+	"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration -standaloneArchive "DKU_DIR"/"$HADOOP_ARCHIVE"
 	echo "dku.registration.channel=docker-image" >>"$DSS_DATADIR"/config/dip.properties
 
 elif [ $(bash -c 'source "$DSS_DATADIR"/bin/env-default.sh && echo "$DKUINSTALLDIR"') != "$DSS_INSTALLDIR" ]; then
 	# Upgrade existing data directory
 	"$DSS_INSTALLDIR"/installer.sh -d "$DSS_DATADIR" -u -y
 	"$DSS_DATADIR"/bin/dssadmin install-R-integration
-	"$DSS_DATADIR"/bin/dssadmin install-spark-integration -standaloneArchivee "$SPARK_ARCHIVE"
-	"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration -standaloneArchive "$HADOOP_ARCHIVE"
+	"$DSS_DATADIR"/bin/dssadmin install-spark-integration -standaloneArchivee "DKU_DIR"/"$SPARK_ARCHIVE"
+	"$DSS_DATADIR"/bin/dssadmin install-hadoop-integration -standaloneArchive "DKU_DIR"/"$HADOOP_ARCHIVE"
 
 fi
 
