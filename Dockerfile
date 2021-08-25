@@ -70,8 +70,6 @@ WORKDIR /home/dataiku
 USER dataiku
 
 # ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre/
-# ENV SPARK_HOME /home/dataiku/dataiku-dss-9.0.4/spark-standalone-home
-# ENV HADOOP_HOME /home/dataiku/dataiku-dss-9.0.4/hadoop-standalone-home
 ENV PATH $PATH:$SPARK_HOME/bin:$HADOOP_HOME/bin
 ENV DKU_DIR /home/dataiku
 
